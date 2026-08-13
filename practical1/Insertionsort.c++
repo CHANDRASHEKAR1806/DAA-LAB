@@ -17,7 +17,7 @@ int main()
         cin >> arr[i];
     }
 
-    // Insertion Sort
+   
     for (int i = 1; i < n; i++)
     {
         int key = arr[i];
