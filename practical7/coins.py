@@ -1,5 +1,10 @@
 def coin_c(N, coins):
-
+    if N == 0:
+        return 1
+    if N < 0:
+        return 0
+    if not coins:
+        return 0
     m = len(coins)
 
     dp = [[0] * (N + 1) for _ in range(m + 1)]
@@ -20,5 +25,4 @@ def coin_c(N, coins):
     return dp[m][N]
 coins = list(map(int, input("Enter coins: ").split()))
 N = int(input("Enter amount: "))
-
 print("Number of ways:", coin_c(N, coins))

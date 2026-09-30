@@ -18,11 +18,9 @@ int main() {
 
     int dp[n + 1][n + 1];
 
-    // Cost of multiplying one matrix is 0
     for (int i = 1; i <= n; i++)
         dp[i][i] = 0;
 
-    // Chain length
     for (int len = 2; len <= n; len++) {
 
         for (int i = 1; i <= n - len + 1; i++) {
